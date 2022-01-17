@@ -724,7 +724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d1617dc0d14a142ae6c79fd53ac3d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitToSpawnPrefab: {fileID: 4106603878111829057, guid: 1ad8a0f80d25c614095ce8ca600cbef4, type: 3}
+  fruitToSpawnPrefabs:
+  - {fileID: 4106603878111829057, guid: 1ad8a0f80d25c614095ce8ca600cbef4, type: 3}
+  bombPrefab: {fileID: 7592202929750042656, guid: 5c2167b33d912c84db445e6eb2e0011f, type: 3}
   spawnPoints:
   - {fileID: 1885520489}
   - {fileID: 2102205803}
@@ -734,6 +736,7 @@ MonoBehaviour:
   minForce: 10
   maxForce: 20
   destroyTime: 5
+  bombPercentage: 10
 --- !u!4 &963514054
 Transform:
   m_ObjectHideFlags: 0
@@ -968,6 +971,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7be8133ce38f8748888444e9c91085e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 182813907}
+  highScoreText: {fileID: 1179488277}
 --- !u!4 &1789777942
 Transform:
   m_ObjectHideFlags: 0

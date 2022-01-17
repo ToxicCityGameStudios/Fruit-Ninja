@@ -11,7 +11,7 @@ public class Bomb : MonoBehaviour
         {
             return;
         }
-        FindObjectOfType<GameManager>().OnBombHit;
+        FindObjectOfType<GameManager>().OnBombHit();
     }
     // Start is called before the first frame update
     void Start()
