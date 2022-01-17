@@ -8,6 +8,8 @@ public class Fruit : MonoBehaviour
     public GameObject slicedFruitPrefab;
     public float explosionRadius = 5f;
     public float destroyTime = 5f;
+    private GameManager gameManager;
+    public int scoreAmount = 3;
 
     // Method that will destroy the current Gameobject and replace it with the sliced fruit
     public void CreateSlicedFruit()
@@ -25,20 +27,20 @@ public class Fruit : MonoBehaviour
             // add an explosion in the center of the banana.
             rigidbody.AddExplosionForce(Random.Range(500, 1000), transform.position, explosionRadius);
         }
+        gameManager.IncreaseScore(scoreAmount);
 
         // destroy the current fruit.
         Destroy(gameObject);
         Destroy(inst, destroyTime);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // When player presses space, the CreateSlicedFruit method will be called
-        if (Input.GetKeyDown(KeyCode.Space))
+        Blade b = collision.GetComponent<Blade>();
+        if (!b)
         {
-            CreateSlicedFruit();
+            return;
         }
+        CreateSlicedFruit();
     }
 }

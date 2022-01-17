@@ -56,6 +56,8 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Fruit.cs" />
     <Compile Include="Assets\Scripts\Blade.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Bomb.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
